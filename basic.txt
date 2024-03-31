@@ -59,3 +59,5 @@ npm: node package manager (installs the uses the stuffs)
 npx: node package executer (doesnot install the stuffs, it directly executes)
 --- npx create-react-app ---
 create-react-app is very bulky utility
+
+React is single Page application(SPA) 
