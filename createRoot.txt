@@ -1,0 +1,31 @@
+---------- Virtual DOM, Fibre and Reconciliation ------------
+
+createRoot method creates an entire dom like structure(virtual dom) of its own (behind the scenes), then it compares the main dom and the virtual dom and updates the changes which are occured in UI
+
+But the browser removes the entire DOM and repaint the entire DOM --- termed as Page Reload
+
+These are dependent on Network Calls. We will study UI updation algorithm and optimizations to avoids intermediates updates in UI.
+
+-------------------------- React Fiber -----------------------------
+Fiber Algorithm is used to update the Virtual DOM
+Headline Feature: Incremental Rendering
+Key Features: to pause, abort, or reuse work as new updates come in; the ability to assign priority to different types of updates; and new concurrency primitives.
+Reconciliation: Recursive Algorithm
+used to reconsider that which needs to be updated or which needs not to be updated.
+**** Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM".****
+
+
+Although Fiber is a ground-up rewrite of the reconciler, the high-level algorithm described in the React docs will be largely the same. The key points are:
+
+Different component types are assumed to generate substantially different trees. React will not attempt to difference them, but rather replace the old tree completely.
+Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
+
+The key points are: 
+In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, causing frames to drop and degrading the user experience.
+Different types of updates have different priorities — an animation update needs to complete more quickly than, say, an update from a data store.
+A push-based approach requires the app (you, the programmer) to decide how to schedule work. A pull-based approach allows the framework (React) to be smart and make those decisions for you.
+
+
+
+
+
