@@ -1,0 +1,61 @@
+React is Frontend Library of Javascript.
+Created by facebook to ease the UI UPDATION.
+It used to make COMPONRNTS which combines HTML and logic into a single resuable function.
+Morethan an individual Library, React is an ecosystem which involves webpack,babble,server and much more.
+Its not as simple as u can include or import React scripts in javascript file.
+
+------------------------------------ USING CREATE REACT APP ----------------------------------------
+On installation it carries package.json file. It has many dependencies.
+It has a dependency named react-scripts which has 48 other sub-dependencies such as webpack,babble.
+
+We make changes to App.js file:
+we are returning the html(components) inside the javascript file. HOW its happening ????
+we write these components inside the APP FUNCTION which KNOW how to render them into HTML.
+
+It uses JSX(Syntax Extension for Javascript) which allows to write markup that looks like HTML directly inside our JS.
+Its not legal JS on its own, so its must be transpiled into real javascript.
+*BABLE is the transpiler which converts the JSX to real JS.
+Real Javascript is rendered to browser(babble does this job)
+
+app.js file has APP is the top level component in the entire application. (WORKSPACEE)
+index.html file has empty div of id=root : it the place where all the react components will be rendered.
+index.js file : Selects that div and app component is rendered inside that id=root.
+
+
+Creating components:(initialising the component)
+its basically a function which return JSX (behind the scenes the transpiler(Bable) converts the JSX into real Javascript)
+function Greeter(){
+    return <h1> Creating Comp </h1>
+}
+
+Rendering components:(using the component): <Greeter/>
+export default function App(){
+    return(
+        <div clasName="App">
+            <Greeter/>
+        </div>
+    )
+}
+
+--------------------- For running codes in local computer ---------------------------------
+Compiler of C++: GNU Compiler Collection (GCC)
+Interpreter of Javascript: V8: Developed by Google, V8 is one of the fastest JavaScript engines and serves as the runtime for Google Chrome and Chromium-based browsers
+Node.js is not an interpreter itself but rather a runtime environment for executing JavaScript code outside of a web browser.
+
+----------------- Industry level recommendations (pick frameworks) ----------------------------------
+If you want to build a new app or a new website fully with React, we recommend picking one of the React-powered frameworks popular in the community. eg:NEXT.js is the framework of React.
+Production-grade React frameworks: NEXT.js, Remix, Gatsby, Expo (for native apps).
+
+------------------ Can I use React without a framework? (Yes, pick bundlers) -----------------------
+Grab react and react-dom from npm, set up your custom build process with a bundler like VITE or PARCEL or WEBPACK, and add other tools as you need them for routing, static generation or server-side rendering, and more.
+A bundler is a tool used in web development to bundle or package together various files and dependencies of a web application into a single file or a few files. This bundling process typically involves combining JavaScript, CSS, and other assets into bundles that can be efficiently served to the browser
+
+------------------------------------------------------------------------------------------------
+react + react-dom: used in web application
+react+ react-native: used im mobile application
+
+------------------- BASIC REACT APP -----------------
+npm: node package manager (installs the uses the stuffs)
+npx: node package executer (doesnot install the stuffs, it directly executes)
+--- npx create-react-app ---
+create-react-app is very bulky utility
