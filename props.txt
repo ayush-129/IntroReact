@@ -23,7 +23,7 @@ function App() {
 }
 export default App;
 
--------------- We will handle the props in Crad.jsx file ------------
+-------------- We will handle the props in Crad.jsx file ----------------
 import React from "react";
 
 function Card({username,btnText="yes"}) {
